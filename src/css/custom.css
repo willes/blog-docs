@@ -1,0 +1,127 @@
+/**
+ * Any CSS included here will be global. The classic template
+ * bundles Infima by default. Infima is a CSS framework designed to
+ * work well for content-centric websites.
+ */
+
+/* You can override the default Infima variables here. */
+:root {
+  --ifm-contrast-foreground-dark-value: 90%;
+  --ifm-color-primary: #3578e5;
+  --ifm-color-secondary: #ebedf0;
+  --ifm-color-success: #00a400;
+  --ifm-color-info: #54c7ec;
+  --ifm-color-warning: #ffba00;
+  --ifm-color-danger: #fa383e;
+  --ifm-color-primary-dark: #306cce;
+  --ifm-color-primary-darker: #2d66c3;
+  --ifm-color-primary-darkest: #2554a0;
+  --ifm-color-primary-light: #538ce9;
+  --ifm-color-primary-lighter: #72a1ed;
+  --ifm-color-primary-lightest: #9abcf2;
+  --ifm-color-primary-contrast-background: #ebf2fc;
+  --ifm-color-primary-contrast-foreground: #102445;
+  --ifm-font-family-base: Roboto, "PingFang SC", "Microsoft Yahei", sans-serif;
+
+  --ifm-code-font-size: 95%;
+
+  --ifm-h1-font-size: 2.2rem;
+  --ifm-h2-font-size: 1.65rem;
+  --ifm-h3-font-size: 1.35rem;
+
+  --ifm-container-width: 950px;
+}
+
+html[data-theme="light"] {
+  --ifm-font-color-base: #222;
+}
+
+html[data-theme="dark"] {
+  --ifm-font-color-base: #ddd;
+}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/* Nice styes from VuePress we should keep */
+
+.navbar {
+  font-size: 0.9rem;
+}
+
+.body {
+  font-family: "Mukta", "Noto Sans SC", sans-serif, "微软雅黑";
+}
+
+.markdown h1:first-child {
+  --ifm-h1-font-size: 2.2rem !important;
+}
+
+.markdown > h2 {
+  --ifm-h2-font-size: 1.65rem !important;
+}
+
+.markdown > h3 {
+  --ifm-h2-font-size: 1.35rem !important;
+}
+
+h2 {
+  padding-bottom: 0.3rem;
+  border-bottom: 1px solid #eaecef;
+}
+
+blockquote {
+  font-size: 1rem;
+  color: #999;
+  border-left: 0.2rem solid #dfe2e5;
+  margin: 1rem 0;
+  padding: 0.25rem 0 0.25rem 1rem;
+}
+.theme-doc-sidebar-item-link a.menu__link {
+  font-weight: normal;
+  font-size: 14px;
+}
+
+.theme-doc-sidebar-item-category > a.menu__link {
+  font-weight: normal;
+  margin-top: 10px;
+}
+
+/* Search bar */
+
+.DocSearch.DocSearch-Button {
+  border: 2px solid transparent;
+  border-radius: 4px;
+}
+
+.DocSearch.DocSearch-Button input:focus {
+  border-color: var(--ifm-color-primary);
+}
+
+.DocSearch.DocSearch-Button input::placeholder {
+  opacity: 1;
+}
+
+.DocSearch-Button-Placeholder {
+  text-align: start;
+  width: 130px;
+}
+
+/* Other Docusaurus conf */
+
+.docusaurus-highlight-code-line {
+  background-color: rgba(0, 0, 0, 0.1);
+  display: block;
+  margin: 0 calc(-1 * var(--ifm-pre-padding));
+  padding: 0 var(--ifm-pre-padding);
+}
+
+html[data-theme="dark"] .docusaurus-highlight-code-line {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+.pagination-nav {
+  display: flex;
+  justify-content: space-between;
+}
+.pagination-nav__link {
+  border: none;
+}
