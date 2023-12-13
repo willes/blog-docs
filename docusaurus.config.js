@@ -80,7 +80,7 @@ const plugins = [
             position: 'right',
             // Anything that isn't `extend`, `'internal`, or contain a slash.
             // Account for local 2-char code at the start.
-            activeBaseRegex: '^(\/[a-z][a-z])?\/(?!(extend\/?|internal\/?|team\/?|lifestyle?)$).*',
+            activeBaseRegex: '^(\/[a-z][a-z])?\/(?!(extend\/?|internal\/?|team\/?|lifestyle\/?)$).*',
           },
           {
             to: 'extend',
