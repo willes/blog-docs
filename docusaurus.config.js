@@ -131,10 +131,10 @@ const plugins = [
       },
       footer: {
         style: 'dark',
-        copyright: `Copyright © ${new Date().getFullYear()} handday. Built with Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()} handday`,
       },
       prism: {
-        additionalLanguages: ['php'],
+        additionalLanguages: [],
         theme: lightCodeTheme,
         darkTheme: darkCodeTheme,
       },
