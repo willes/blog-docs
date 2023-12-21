@@ -67,7 +67,6 @@ export const StyledBlogItem = styled.div`
       padding: 0;
     }
   }
-
   article {
     .single-post--date {
       color: var(--ifm-color-primary);
@@ -133,7 +132,12 @@ export const StyledBlogItem = styled.div`
       -webkit-line-clamp: 2;
       /* 设置或检索伸缩盒对象的子元素的排列方式 */
       -webkit-box-orient: vertical;
-      font-size:13px;
+      & * {
+          font-size:14px;
+          line-height:1.5;
+          margin: 0;
+          font-weight:normal;
+      }
     }
   }
 

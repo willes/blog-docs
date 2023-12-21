@@ -84,12 +84,12 @@ const plugins = [
           },
           {
             to: 'extend',
-            label: '文档',
+            label: '开发文档',
             position: 'right',
           },
           {
             to: '/lifestyle',
-            label: '内部',
+            label: '知识拓展',
             position: 'right',
             activeBasePath: `lifestyle`,
           },

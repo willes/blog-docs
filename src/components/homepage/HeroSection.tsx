@@ -94,9 +94,9 @@ export default function HeroSection() {
         <div className="max-w-screen-2xl my-4 lg:my-16 grid grid-cols-1 mx-auto lg:gap-x-20 lg:grid-cols-2 lg:py-14">
          <div className='max-w-lg mx-auto flex justify-center flex-col'>
          <h2 className="mb-8 font-mono text-5xl font-50 border-none">
-            The Design Thinking superpowers
+          CodeChronicles Canvas
           </h2>
-          <p className='text-lg leading-7 mb-8'>工具，教程，设计和创新专家，都在一个地方！最直观的方式来想象你的下一个用户体验。</p>
+          <p className='text-lg leading-7 mb-8'>Blending Tech Expertise with Personal Legends</p>
           <div>
             <Link to="/extend" className='transition ease-in-out hover:bg-blue-100 hover:no-underline  duration-300 rounded-full px-10 py-3 bg-blue-500 cursor-pointer text-white border-none'>开 始</Link>
           </div>

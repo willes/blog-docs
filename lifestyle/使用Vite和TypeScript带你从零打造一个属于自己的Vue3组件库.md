@@ -187,7 +187,7 @@ vite 是基于esmodule的 所以type="module"
 
 ### 新建app.vue模板
 
-``` javascript
+```javascript
 <template>
     <div>
         启动测试
@@ -206,7 +206,7 @@ const app = createApp(App)
 app.mount('#app')
 ```
 
-此时会发现编译器会提示个错误：找不到模块“./app.vue”或其相应的类型声明
+此时会发现编译器会提示个错误：找不到模块 `“./app.vue”`或其相应的类型声明
 
 因为直接引入.vue文件 TS会找不到对应的类型声明；所以需要新建typings（命名没有明确规定，TS会自动寻找.d.ts文件）文件夹来专门放这些声明文件。
 
@@ -252,7 +252,7 @@ vite启动默认端口为3000；在浏览器中打开localhost:3000 就会看我
 
 既然它是一个包，所以我们新建utils目录后就需要初始化它，让它变成一个包；终端进入utils文件夹执行：pnpm init 然后会生成一个package.json文件；这里需要改一下包名，我这里将name改成@kitty-ui/utils表示这个utils包是属于kitty-ui这个组织下的。所以记住发布之前要登录npm新建一个组织；例如kitty-ui
 
-```
+```json
 {
   "name": "@kitty-ui/utils",
   "version": "1.0.0",
@@ -270,7 +270,7 @@ vite启动默认端口为3000；在浏览器中打开localhost:3000 就会看我
 
 因为我们使用ts写的，所以需要将入口文件index.js改为index.ts，并新建index.ts文件:(先导出一个简单的加法函数)
 
-```
+``` ts
 export const testfun = (a:number,b:number):number=>{
     return a + b
 }
@@ -282,7 +282,7 @@ components是我们用来存放各种UI组件的包
 
 新建components文件夹并执行 pnpm init 生成package.json
 
-```
+```json
 {
   "name": "kitty-ui",
   "version": "1.0.0",
@@ -300,7 +300,7 @@ components是我们用来存放各种UI组件的包
 
 新建index.ts入口文件并引入utils包
 
-```
+```ts
 import {testfun} from '@kitty-ui/utils'
 
 const result = testfun (1,1)
@@ -322,13 +322,13 @@ npm i esno -g
 
 进入components文件夹执行
 
-```
+```shell
 pnpm install @kitty-ui/utils
 ```
 
 你会发现pnpm会自动创建个软链接直接指向我们的utils包；此时components下的packages：
 
-```
+```json
 {
   "name": "kitty-ui",
   "version": "1.0.0",
@@ -370,7 +370,7 @@ pnpm install @kitty-ui/utils
 
 首先在button下新建一个简单的button.vue
 
-```
+``` vue
 <template>
     <button>测试按钮</button>
 </template>
@@ -386,7 +386,7 @@ export default Button
 
 因为我们开发组件库的时候不可能只有button，所以我们需要一个components/index.ts将我们开发的组件一个个的集中导出
 
-```
+```ts
 import Button from './button'
 
 export {
@@ -405,13 +405,13 @@ export {
 
 此时你就会发现packages.json的依赖多了个 
 
-```
+```json
 "kitty-ui": "workspace:^1.0.0"
 ```
 
 这时候我们就能直接在我们的测试项目下引入我们本地的components组件库了，启动我们的测试项目，来到我们的 **examples/app.vue** 直接引入Button
 
-```
+``` html
 <template>
     <div>
         <Button />
@@ -431,7 +431,7 @@ import { Button } from 'kitty-ui'
 
 在button目录下新建types.ts
 
-```
+```js
 
 
 import { ExtractPropTypes } from 'vue'
@@ -454,12 +454,6 @@ export const buttonProps = {
 }
 
 export type ButtonProps = ExtractPropTypes<typeof buttonProps>
-
-
-
-
-
-
 
 **TIPS**
 

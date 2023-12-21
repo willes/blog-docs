@@ -70,7 +70,7 @@ function BlogListPage(props) {
       </Head>
       <div className="container-wrapper">
         <div className="container padding-vert--lg">
-          <div className="row">
+          <div className="row" style={{boxShadow: '0px 0px 10px 0px rgb(0 0 0 / 10%)'}}>
             <div className="col col--12">
               {/* <div className="content__divider"></div> */}
               {/* {!isPaginated && (

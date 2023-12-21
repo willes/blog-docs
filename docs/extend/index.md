@@ -7,8 +7,8 @@ keywords:
   - frontend
 ---
 <p align="left">
-    <a><img src="https://img.shields.io/badge/build-passing-blue"/></a>
-    <a href='http://front.handday.com:9999'><img src='https://img.shields.io/badge/gitter-join%20chat-brightgreen'/></a>
+    <a style={{marginRight: '4px'}}><img src="https://img.shields.io/badge/build-passing-blue"/></a>
+    <a style={{marginRight: '4px'}} href='http://front.handday.com:9999'><img src='https://img.shields.io/badge/gitter-join%20chat-brightgreen'/></a>
     <a><img src="https://img.shields.io/badge/license-platform-brightgreen"/></a>
 </p>
 

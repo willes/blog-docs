@@ -147,7 +147,11 @@ function BlogPostItem(props) {
       )
     );
   };
+const clickHandler = (event) => {
+  const {nodeName, src} = event.target
+  console.log('%c [ nodeName, src ]-152', 'font-size:13px; background:#f1d99f; color:#ffffe3;', nodeName, src)
 
+}
   return (
     <StyledBlogItem
       isDark={isDarkTheme}
@@ -164,7 +168,7 @@ function BlogPostItem(props) {
       <div
         className={`row
          ${!isBlogPostPage ? "blog-list--item0" : ""}`}
-        style={{ margin: 0 }}
+        style={{ margin: 0}}
       >
         {/* 列表页日期 */}
         {/* {!isBlogPostPage && (
@@ -225,12 +229,13 @@ function BlogPostItem(props) {
             <div className={`${
             image_url && !isBlogPostPage ? `flex flex-row` : ''
           }`}>
-            {image_url && <img src={image_url} width={120} className="mr-2"/>}
+            {image_url && !isBlogPostPage && <img src={image_url} width={160} className="mr-2"/>}
             {/* 正文 */}
             <MarkdownSection
               isBlogPostPage={isBlogPostPage}
               isDark={isDarkTheme}
               className="markdown"
+              onClick={clickHandler}
             >
               <MDXProvider components={MDXComponents}>{children}</MDXProvider>
             </MarkdownSection>

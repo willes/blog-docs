@@ -46,8 +46,16 @@ html[data-theme="dark"] {
 
 .navbar {
   font-size: 0.9rem;
+  color: #fff;
+  background-image: linear-gradient( 135deg, #FFA6B7 10%, #1E2AD2 100%);
 }
-
+.navbar__link, .navbar .navbar__title {
+  color: #fff;
+}
+.navbar__link:hover, .navbar__link--active {
+  color: var(--ifm-color-primary-lightest);
+  text-decoration: none;
+}
 .body {
   font-family: "Mukta", "Noto Sans SC", sans-serif, "微软雅黑";
 }
