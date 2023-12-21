@@ -15,8 +15,8 @@ function SDK({ icon, to, name }: { icon: string; name: string; to?: string }) {
 
 export default function SDKs() {
   return (
-   <section className='w-full px-4 bg-gradient-to-b from-transparent to-pink-50'>
-     <div className="mx-auto mb-32 flex w-full max-w-screen-2xl flex-col p-4 py-0">
+   <section className='w-full px-4 flex-1 bg-gradient-to-b from-transparent to-pink-50'>
+     <div className="mx-auto flex w-full max-w-screen-2xl flex-col p-4 py-0">
       <span className="mb-2 uppercase tracking-wider text-text-400">
         Documentation
       </span>
